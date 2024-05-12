@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Autenticação</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="mb-4">Login</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">Usuário</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="usuario" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="senha" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  const loginForm = document.querySelector('form');
+  //const loginForm = document.getElementById('loginForm');
+
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const username = loginForm.querySelector('#username').value;
+    const password = loginForm.querySelector('#password').value;
+
+    console.log('Dados do formulário:', { username, password });
+
+    try {
+      const response = await axios.post('https://web-library.vercel.app/login', {
+        username,
+        password
+      });
+
+      console.log(response.data.message);
+      alert("Sucesso ao logar! Seja bem vindo", {username});
+      // Redirecionar para a próxima página após o login bem-sucedido
+      window.location.href = 'conteudo.html';
+    } catch (error) {
+      console.error(error.response.data.message);
+      // Exibir mensagem de erro ao usuário
+      alert('Usuário ou senha incorretos. Por favor, verifique os dados e tente novamente.');
+    }
+  });
+</script>
+
+</body>
+</html>
