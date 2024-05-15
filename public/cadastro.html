@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tela de Cadastro de Usuário</title>
+  <title>Cadastro de Usuário</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
+<header class="fixed-header">
+    <div class="container">
+       <div class="header-content">
+         <h1>Biblioteca Virtual</h1>                
+           <div class="menu-toggle">
+               <input type="checkbox" id="menu-toggle-checkbox" />
+               <label for="menu-toggle-checkbox">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+               </label>
+               <ul class="menu">
+                   <li><a href="index.html">Página Inicial</a></li>
+                   <li><a href="login.html">Login</a></li>
+                   <li><a href="cadastro.html">Cadastro</a></li>
+                   <li><a href="contato.html">Contato</a></li>
+               </ul>
+           </div>
+       </div>
+   </div>
+</header>
+
+<main>
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
@@ -23,10 +48,29 @@
           <input type="password" class="form-control" id="password" name="password" placeholder="senha" required>
         </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <a href="index.html" class="btn btn-secondary">Página Inicial</a>
       </form>
     </div>
   </div>
 </div>
+</main>
+
+<footer class="fixed-footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://github.com/raulmelo87/web-library" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+          <p>&copy; 2024 Equipe 30 ADS - Unifor. Todos os direitos reservados.</p>
+      </div>
+  </div>
+</footer>
+
+<!-- Fone Awesome para os ícones -->
+<script src="https://kit.fontawesome.com/b59749c01b.js" crossorigin="anonymous"></script>
 
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

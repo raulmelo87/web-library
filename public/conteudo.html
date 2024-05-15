@@ -4,30 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conteúdo</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
+<header class="fixed-header">
+    <div class="container">
+        <div class="header-content">
+            <h1>Biblioteca Virtual <img src="img/books2.png" width="50" height="50" alt=""> </h1>                
+            <div class="menu-toggle">
+                <input type="checkbox" id="menu-toggle-checkbox" />
+                <label for="menu-toggle-checkbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="menu">
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>  
+
+<main class="main-content">
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-6 offset-md-3 text-center">
-      <h1>Biblioteca</h1>
+      <img src="img/boy.png" alt=""> <img src="img/girl.png" alt="">
+      <p>Esse é o nosso acervo de livros para os membros da biblioteca.<br>Faça aqui o download do seu livro digital e boa leitura!</p>
       <hr>
-      <p>Este espaço é dedicado para o compartilhamento de e-books</p>
-      <p>Faça aqui o download do seu livro digital</p>
-      <hr>
-      <h2>Lista de livros em pdf</h2>
-      <a href="https://edisciplinas.usp.br/pluginfile.php/4899892/mod_resource/content/2/Sapiens%20Uma%20Breve%20Hist%C3%B3ria%20da%20Humanidade.pdf" target="_blank">Sapiens, uma breve história da humanidade - Yuval Harari</a>
-      <br>
-      <a href="https://www.colegioceijf.com.br/wp-content/uploads/2021/06/O-MUNDO-DE-SOFIA-JOSTEIN-GAARDEN-1-3o-B.pdf" target="_blank">O mundo de Sofia - Jostein Gaarder</a>
-      <br>
-      <a href="https://www.ebooksbrasil.org/adobeebook/erasmo.pdf" target="_blank">Elogio da loucura - Erasmo de Roterdã</a>
-      <br>
-      <a href="https://marcosfabionuva.com/wp-content/uploads/2011/08/o-manifesto-comunista.pdf" target="_blank">Manifesto comunista - Karl Marx e Friedrich Engels</a>
+      <h3>Lista de livros em pdf</h3>
+        <h4>Literatura</h4>
+        <a href="http://www.dominiopublico.gov.br/download/texto/eb00002a.pdf" target="_blank">A Divina Comédia</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/ua00106a.pdf" target="_blank">A Metamorfose</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/fs000069pdf.pdf" target="_blank">A Vida Eterna</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/bv00180a.pdf" target="_blank">Dom Casmurro</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/eb00008a.pdf" target="_blank">Don Quixote</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/bv000162.pdf" target="_blank">Os Lusíadas</a><br>        
+        <a href="http://www.dominiopublico.gov.br/download/texto/bv000231.pdf" target="_blank">O Alienista</a><br>        
+        <h4>Filosofia</h4>
+        <a href="http://www.dominiopublico.gov.br/download/texto/cv000065.pdf" target="_blank">Apologia de Sócrates</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/cv000016.pdf" target="_blank">Crítica da Razão Pura</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/eb000018.pdf" target="_blank">O Sofista</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/cv000026.pdf" target="_blank">O Elogio da Loucura</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/cv000012.pdf" target="_blank">Sobre as Ciências e as Artes</a><br>        
+        <a href="http://www.dominiopublico.gov.br/download/texto/cv000070.pdf" target="_blank">Utopia</a><br>
+        <h4>História</h4>
+        <a href="http://www.dominiopublico.gov.br/download/texto/jn000061.pdf" target="_blank">A Escravidão</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/al000227.pdf" target="_blank">A Política do Poder</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/al000232.pdf" target="_blank">A Política entre as Nações</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/al000229.pdf" target="_blank">A Sociedade Anárquica</a><br>
+        <a href="http://www.dominiopublico.gov.br/download/texto/ph000231.pdf" target="_blank">Escritos Revolucionários</a><br>        
     </div>
   </div>
 </div>
+</main>
+
+<footer class="fixed-footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://github.com/raulmelo87/web-library" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+          <p>&copy; 2024 Equipe 30 ADS - Unifor. Todos os direitos reservados.</p>
+      </div>
+  </div>
+</footer>
+
+<!-- Fone Awesome para os ícones -->
+<script src="https://kit.fontawesome.com/b59749c01b.js" crossorigin="anonymous"></script>
 
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

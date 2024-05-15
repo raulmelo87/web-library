@@ -1,0 +1,198 @@
+/* Importação da fonte Ubuntu Sans */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Estilos gerais */
+
+* {
+    margin: 0;
+    font-family: 'Ubuntu Sans', sans-serif;
+}
+
+main {
+    padding-top: 80px;
+}
+
+.main-content {
+    margin-bottom: 150px;
+}
+
+.links a{
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.img-container{
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* Estilos do header */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.fixed-header {
+    position: fixed;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+h1 {
+    color: #318CE7;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu-toggle { 
+    display: block;
+    cursor: pointer;
+}
+
+.menu-toggle input {
+    display: none;
+}
+
+.menu-toggle label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #318CE7;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-toggle span:nth-child(3) {
+    bottom: 0;
+}
+
+#menu-toggle-checkbox:checked + label span:nth-child(1) {
+    opacity: 0;
+}
+
+#menu-toggle-checkbox:checked + label span:nth-child(2) {    
+    transform: translateY(50%) rotate(-45deg);
+}
+
+#menu-toggle-checkbox:checked + label span:nth-child(3) {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-toggle input:checked + label + ul {
+    display: block;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 200px;
+    z-index: 1000;
+}
+
+.menu li {
+    list-style: none;
+    text-align: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 0;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #318CE7;
+}
+
+/* Estilos do footer */
+footer {
+    background-color: #6aa9e9;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons {
+    max-width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons a:hover {
+    color: #318CE7;
+}
+
+.footer-content p {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
