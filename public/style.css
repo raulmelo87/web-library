@@ -64,6 +64,10 @@ h1 {
     font-size: 34px;
 }
 
+.h1-title a {
+    text-decoration: none;
+}
+
 .menu-toggle { 
     display: block;
     cursor: pointer;
