@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: 'Usuário não encontrado' });
     }
-    // Verificar se a senha está correta (sem bcrypt)
+    // Verificar se a senha está correta
     if (user.password !== password) {
       return res.status(401).json({ message: 'Credenciais inválidas' });
     }
@@ -65,7 +65,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Get all users
+// Rota para buscar usuários
 router.get('/', async (req, res) => {
   try {
       const users = await User.find();
@@ -77,7 +77,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Create a user
+// Rota para criar um usuário
 router.post('/', async (req, res) => {
   const user = new User({
       username: req.body.username,
@@ -93,7 +93,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Update a user
+// Rota para atualizar um usuário
 router.patch('/users/:id', async (req, res) => {
   try {
       const user = await User.findById(req.params.id);
@@ -111,7 +111,7 @@ router.patch('/users/:id', async (req, res) => {
   }
 });
 
-// Delete a user
+// Rota para deletar uma usuário
 router.delete('/:id', async (req, res) => {
   try {
       const user = await User.findById(req.params.id);

@@ -8,16 +8,12 @@
     font-family: 'Ubuntu Sans', sans-serif;
 }
 
-body {
-    padding: 20px;
-}
-
 main {
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 .main-content {
-    margin-top: 70px;
+    margin-top: 50px;
     margin-bottom: 170px;
 }
 
@@ -32,7 +28,7 @@ main {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
